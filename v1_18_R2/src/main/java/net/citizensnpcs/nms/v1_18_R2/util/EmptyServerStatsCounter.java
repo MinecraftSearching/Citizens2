@@ -9,9 +9,11 @@ import net.minecraft.stats.ServerStatsCounter;
 import net.minecraft.stats.Stat;
 import net.minecraft.world.entity.player.Player;
 
+import java.io.File;
+
 public class EmptyServerStatsCounter extends ServerStatsCounter {
     public EmptyServerStatsCounter() {
-        super(null, CitizensAPI.getDataFolder());
+        super(null, new File(CitizensAPI.getDataFolder(), "00000000-0000-0000-0000-000000000000"));
     }
 
     @Override
